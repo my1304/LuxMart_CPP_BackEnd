@@ -1,0 +1,50 @@
+FROM rockylinux:9
+
+# Устанавливаем зависимости
+RUN dnf install -y epel-release && \
+    dnf groupinstall -y "Development Tools" && \
+    dnf install -y cmake gcc-c++ make wget openssl-devel boost-devel \
+    postgresql-devel
+
+# Устанавливаем Boost с другого источника
+RUN wget https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2 -O /tmp/boost_1_86_0.tar.gz && \
+    file /tmp/boost_1_86_0.tar.gz && \
+    tar -xzf /tmp/boost_1_86_0.tar.gz -C /opt && \
+    cd /opt/boost_1_86_0 && \
+    ./bootstrap.sh && \
+    ./b2 install
+
+RUN cd /tmp && \
+    BOOST_VERSION_MOD=$(echo $BOOST_VERSION | tr . _) && \
+    wget https://archives.boost.io/release/${BOOST_VERSION}/source/boost_${BOOST_VERSION_MOD}.tar.bz2 && \
+
+    tar --bzip2 -xf boost_${BOOST_VERSION_MOD}.tar.bz2 && \
+    cd boost_${BOOST_VERSION_MOD} && \
+    ./bootstrap.sh --prefix=/usr/local && \
+    ./b2 install && \
+    rm -rf /tmp/*
+
+RUN wget https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2 -O /tmp/boost_1_86_0.tar.bz2 && \
+    file /tmp/boost_1_86_0.tar.bz2 && \
+    tar -xjf /tmp/boost_1_86_0.tar.bz2 -C /opt && \
+    cd /opt/boost_1_86_0 && \
+    ./bootstrap.sh && \
+    ./b2 install
+
+# Устанавливаем OpenSSL
+RUN dnf install -y openssl-devel
+
+# Копируем исходники
+WORKDIR /app
+COPY . .
+
+# Создаем папку сборки
+WORKDIR /app/build
+
+RUN rm -rf /app/build/CMakeCache.txt && cmake .. && make
+
+# Проверяем файлы в папке сборки
+RUN ls -l /app/build
+
+# Запуск сервера (замени "luxmart_server" на свой исполняемый файл)
+CMD ["./luxmart_backend"]

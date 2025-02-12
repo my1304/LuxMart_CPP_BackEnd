@@ -1,0 +1,3 @@
+/share/backend/LuxMart_CPP_BackEnd/build/CMakeFiles/LuxMart_CPP_BackEnd.dir
+/share/backend/LuxMart_CPP_BackEnd/build/CMakeFiles/edit_cache.dir
+/share/backend/LuxMart_CPP_BackEnd/build/CMakeFiles/rebuild_cache.dir
