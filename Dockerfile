@@ -32,4 +32,4 @@ RUN rm -rf /app/build/CMakeCache.txt && \
 # Проверяем файлы в папке сборки
 RUN ls -l /app/build
 # Запуск сервера (замени "luxmart_server" на свой исполняемый файл)
-CMD ["./luxmart_backend"]
+CMD ["./LuxMart_CPP_BackEnd"]
