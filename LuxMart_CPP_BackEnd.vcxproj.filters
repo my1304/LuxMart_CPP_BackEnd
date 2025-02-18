@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\scr\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\scr\security\security.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\scr\security\secController\authController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\scr\security\secConfig\jwtService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\scr\controllers\controllers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\scr\database\dbOperations.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\scr\services\functions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\include\bcrypt\bcrypt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\include\bcrypt\blowfish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\AppLuxMart\LuxMart_CPP_BackEnd\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5E7DC439-5DFA-3D71-87D8-CDA956D76C33}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
