@@ -1,4 +1,5 @@
 ﻿#include <boost/asio.hpp>
+#include <optional>
 #include <nlohmann/json.hpp>
 #include "security/jwtService.h"
 
