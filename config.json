@@ -1,0 +1,13 @@
+{
+  "server": {
+    "port": 8088,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "name": "railway",
+    "host": "35.214.179.121",
+    "port": 18014,
+    "username": "postgres",
+    "password": "HzjDpMfroFamjmAeQsybJbTvotflohce"
+  }
+}
