@@ -5,8 +5,8 @@
   },
   "database": {
     "name": "railway",
-    "host": "postgres.railway.internal",
-    "port": 0,
+    "host": "35.214.179.121",
+    "port": 18014,
     "username": "postgres",
     "password": "HzjDpMfroFamjmAeQsybJbTvotflohce"
   }

@@ -16,7 +16,7 @@ int serverPort = configData["server"]["port"];
 std::string dbUrl = "dbname = " + configData["database"]["name"].get<std::string>() +
 " user = " + configData["database"]["username"].get<std::string>() +
 " password = " + configData["database"]["password"].get<std::string>() +
-" hostaddr = " + configData["database"]["host"].get<std::string>();
+" host = " + configData["database"]["host"].get<std::string>();
 
 std::string pictureUrl = R"(\\COMPSL\www)";
 
